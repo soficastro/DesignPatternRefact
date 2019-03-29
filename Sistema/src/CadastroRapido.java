@@ -8,19 +8,19 @@ public class CadastroRapido {
         Integer contadorCurso = contador;
 
         contadorCurso ++;
-        Curso cursoRapido = new Curso(contadorCurso,"Maquiagem", 200.00);
+        Curso cursoRapido = new Curso.CursoBuilder().setNome("Maquiagem").setId(contadorCurso).setValor(200.00).build();
         cursos.put(cursoRapido.getId(), cursoRapido);
 
         contadorCurso ++;
-        Curso cursoRapido2 = new Curso(contadorCurso,"Cabeleireiro", 250.00);
+        Curso cursoRapido2 = new Curso.CursoBuilder().setNome("Cabeleireiro").setId(contadorCurso).setValor(250.00).build();
         cursos.put(cursoRapido2.getId(), cursoRapido2);
 
         contadorCurso ++;
-        Curso cursoRapido3 = new Curso(contadorCurso,"Depila��o", 300.00);
+        Curso cursoRapido3 = new Curso.CursoBuilder().setNome("Depilacao").setId(contadorCurso).setValor(300.00).build();
         cursos.put(cursoRapido3.getId(), cursoRapido3);
 
         contadorCurso ++;
-        Curso cursoRapido4 = new Curso(contadorCurso,"Manicure", 150.00);
+        Curso cursoRapido4 = new Curso.CursoBuilder().setNome("Manicure").setId(contadorCurso).setValor(150.00).build();
         cursos.put(cursoRapido4.getId(), cursoRapido4);
 
     }
@@ -372,7 +372,7 @@ public class CadastroRapido {
                 }
             }
 
-            Turma turmasRapida = new Turma(contadorTurma, cursoTurma, dataInicioTurma, nome, alunosTurma, professorTurma, matriculados);
+            Turma turmasRapida = new Turma.TurmaBuilder().setId(contadorTurma).setCursoTurma(cursoTurma).setDataInicio(dataInicioTurma).setNome(nome).setAlunosTurma(alunosTurma).setProfessorTurma(professorTurma).setMatriculado(matriculados).build();
             turmasTotal.put(turmasRapida.getId(), turmasRapida);
 
         }

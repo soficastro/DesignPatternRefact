@@ -11,17 +11,17 @@ public class Turma {
     private Professor professorTurma;
     private Integer matriculado;
 
-    public Turma(Integer id, Curso cursoTurma, String dataInicio, String nome,
-                 HashMap<Integer, Aluno> alunosTurma, Professor professorTurma, Integer matriculado) {
-        //super();
-        this.id = id;
-        this.cursoTurma = cursoTurma;
-        this.dataInicio = dataInicio;
-        this.nome = nome;
-        this.alunosTurma = alunosTurma;
-        this.professorTurma = professorTurma;
-        this.matriculado = matriculado;
+
+    public Turma(TurmaBuilder builder) {
+        this.id = builder.id;
+        this.cursoTurma = builder.cursoTurma;
+        this.dataInicio = builder.dataInicio;
+        this.nome = builder.nome;
+        this.alunosTurma = builder.alunosTurma;
+        this.professorTurma = builder.professorTurma;
+        this.matriculado = builder.matriculado;
     }
+
 
 
     public Integer getId() {
@@ -89,5 +89,58 @@ public class Turma {
 
     }
 
+    public static class TurmaBuilder {
+        private Integer id;
+        private Curso cursoTurma;
+        private String dataInicio;
+        private String nome;
+        private HashMap<Integer, Aluno> alunosTurma;
+        private Professor professorTurma;
+        private Integer matriculado;
+
+
+        public TurmaBuilder(){
+
+        }
+
+        public TurmaBuilder setId(Integer id) {
+            this.id = id;
+            return this;
+        }
+
+        public TurmaBuilder setCursoTurma(Curso cursoTurma) {
+            this.cursoTurma = cursoTurma;
+            return this;
+        }
+
+        public TurmaBuilder setNome(String nome) {
+            this.nome = nome;
+            return this;
+        }
+
+        public TurmaBuilder setDataInicio(String dataInicio) {
+            this.dataInicio = dataInicio;
+            return this;
+        }
+
+        public TurmaBuilder setAlunosTurma(HashMap<Integer, Aluno> alunosTurma) {
+            this.alunosTurma = alunosTurma;
+            return this;
+        }
+
+        public TurmaBuilder setProfessorTurma(Professor professorTurma) {
+            this.professorTurma = professorTurma;
+            return this;
+        }
+
+        public TurmaBuilder setMatriculado(Integer matriculado) {
+            this.matriculado = matriculado;
+            return this;
+        }
+
+        public Turma build() {
+            return new Turma(this);
+        }
+    }
 
 }

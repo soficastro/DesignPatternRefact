@@ -37,11 +37,11 @@ public class CadastrarTurma {
         int opcao = 0;
         String opUsuario = null;
         do{
-            opUsuario = JOptionPane.showInputDialog("Selecione uma op��o:\n"
+            opUsuario = JOptionPane.showInputDialog("Selecione uma opcao:\n"
                     + "1 - Cadastrar Turma \n"
                     + "2 - Listar Turmas\n"
                     + "3 - Excluir Turmas \n"
-                    + "4 - Cadastro R�pido \n"
+                    + "4 - Cadastro Rapido \n"
                     + "9 - Voltar ao Menu Principal");
             if(opUsuario != null){
                 opcao = new Integer (opUsuario);
@@ -61,7 +61,7 @@ public class CadastrarTurma {
                     break;
                 default:
                     if (opcao != 9) {
-                        JOptionPane.showMessageDialog(null, "Op��o inv�lida!");
+                        JOptionPane.showMessageDialog(null, "Opcao invalida!");
                     }
             }
         } while (opcao != 9);
@@ -103,7 +103,7 @@ public class CadastrarTurma {
 
                 idAluno = null;
                 idAluno = Integer.valueOf(JOptionPane.showInputDialog("Insira a matricula do aluno \n "
-                        + "Tecle enter para interromper a inclus�o de alunos. \n"
+                        + "Tecle enter para interromper a inclusao de alunos. \n"
                         + alunosDisponiveis));
 
 
@@ -134,7 +134,7 @@ public class CadastrarTurma {
 
         }
         idProfessor = Integer.valueOf(JOptionPane.showInputDialog("Insira a matricula do professor \n "
-                + "Tecle enter para interromper a inclus�o. \n"
+                + "Tecle enter para interromper a inclusao. \n"
                 + professoresDisponiveis));
 
         for (Professor professor : professores.values()) {
@@ -147,8 +147,8 @@ public class CadastrarTurma {
 
 
 
-        contadorTurma++;
-        Turma turmaCadastrada = new Turma (contadorTurma,cursoTurma,dataInicio,nomeTurma,alunosTurma,professorTurma, contadorAlunoTurma);
+        contadorTurma++;  
+        Turma turmaCadastrada = new Turma.TurmaBuilder().setAlunosTurma(alunosTurma).setCursoTurma(cursoTurma).setProfessorTurma(professorTurma).setDataInicio(dataInicio).setId(contadorTurma).setMatriculado(contadorAlunoTurma).setNome(nomeTurma).build();
 
         turmas.put(turmaCadastrada.getId(), turmaCadastrada);
 

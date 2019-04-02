@@ -17,7 +17,7 @@ Nas classes Curso e Turma, para que a construções
 Nas classes CadastrarCurso, CadastrarPessoa, CadastrarTurma, GerarBalanco, pois foi verificado que estas classes só podiam
 apresentar uma instância, ou seja, só pode haver um objeto de cada uma dessas classes. Assim, garantimos que isso ocorra de fato.
 
-# *Projeto *
+# *Projeto*
 
 Projeto original
 

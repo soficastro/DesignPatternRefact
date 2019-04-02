@@ -10,7 +10,7 @@ Sua refatoração está na pasta Design https://github.com/soficastro/DesignPatt
 
 -> *Builder*
 
-Nas classes Curso e Turma, para que a construções 
+Nas classes Curso e Turma. Foram criadas as nested classes CursoBuilder e TurmaBuilder para lidar com a construção dos objetos dessas classes de acordo com o padrão Builder. 
 
 -> *Singleton*
 
@@ -20,4 +20,3 @@ apresentar uma instância, ou seja, só pode haver um objeto de cada uma dessas 
 # *Projeto*
 
 Projeto original
-

@@ -10,14 +10,14 @@ Sua refatoração está na pasta Design https://github.com/soficastro/DesignPatt
 
 -> *Builder*
 
-Nas classes Curso e Turma
+Nas classes Curso e Turma, para que a construções 
 
 -> *Singleton*
 
 Nas classes CadastrarCurso, CadastrarPessoa, CadastrarTurma, GerarBalanco, pois foi verificado que estas classes só podiam
 apresentar uma instância, ou seja, só pode haver um objeto de cada uma dessas classes. Assim, garantimos que isso ocorra de fato.
 
-# Projeto 
+# *Projeto *
 
 Projeto original
 

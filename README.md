@@ -3,8 +3,10 @@
 # *Projeto Sistema de Cursos de @danilo-aalmeida*
 
 Projeto original https://github.com/danilo-aalmeida/SistemaDeCursos
+Para rodar, baixe o projeto e execute a main da classe SistemaDeCursos.
 
 Sua refatoração está na pasta Design https://github.com/soficastro/DesignPatternRefact/tree/master/Design
+Para rodar, baixe o projeto e execute a main da classe SistemaDeCursos.
 
 - *Padrões usados*
 
@@ -14,8 +16,7 @@ Nas classes Curso e Turma. Foram criadas as nested classes CursoBuilder e TurmaB
 
 -> *Singleton*
 
-Nas classes CadastrarCurso, CadastrarPessoa, CadastrarTurma, GerarBalanco, pois foi verificado que estas classes só podiam
-apresentar uma instância, ou seja, só pode haver um objeto de cada uma dessas classes. Assim, garantimos que isso ocorra de fato.
+Nas classes CadastrarCurso, CadastrarPessoa, CadastrarTurma, GerarBalanco, pois foi verificado que estas classes só podiam apresentar uma instância, ou seja, só pode haver um objeto de cada uma dessas classes. Assim, garantimos que isso ocorra de fato.
 
 # *Projeto*
 
